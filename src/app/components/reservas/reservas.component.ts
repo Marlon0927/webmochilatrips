@@ -34,15 +34,11 @@ export class ReservaComponent {
   }
   ngOnInit() {
     this.reservaForm = this.formBuilder.group({
-      'usuario': '',
-      'correo': '',
-      'clave': '',
-      'nombre': '',
-      'telefono': '',
-      'direccion': '',
-      'ciudad': '',
-      'preferencias_de_viaje': '',
-      'rol': ''
+      'tipo_reserva': '',
+      'destino': '',
+      'fecha_inicio': '',
+      'fecha_fin': '',
+      'cant_personas': ''
     });
     this.getAllReservas();
   }
