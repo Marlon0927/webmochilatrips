@@ -225,6 +225,12 @@ button {
     z-index: 9999;
 }
 
+.modo-oscuro {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+
 
 
 
@@ -313,6 +319,119 @@ footer {
     margin-top: 2rem;
     font-size: 0.9rem;
 }
+
+
+
+
+
+.destino-card {
+    background-color: #ffffff;
+    border-radius: 1.25rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    transform-origin: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Líneas azul arriba y abajo */
+.destino-card::before,
+.destino-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 6px;
+    width: 0%;
+    background: linear-gradient(90deg, #ff6f61, #3b82f6);
+    transition: width 0.3s ease;
+    border-radius: 6px;
+}
+
+.destino-card::before {
+    top: 0;
+}
+
+.destino-card::after {
+    bottom: 0;
+}
+
+.destino-card:hover::before,
+.destino-card:hover::after {
+    width: 100%;
+}
+
+.destino-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.destino-card .contenido {
+    padding: 1rem 1.25rem;
+    background-color: #ffffff;
+    transition: background-color 0.4s ease;
+}
+
+.destino-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: #111827;
+}
+
+.destino-card p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+.destino-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+.destino-card:hover img {
+    transform: scale(1.05);
+}
+
+.destino-card:hover .contenido {
+    background-color: #f0f9ff;
+}
+
+/* Modo oscuro elegante */
+body.modo-oscuro .destino-card {
+    background-color: #1e293b;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.modo-oscuro .destino-card .contenido {
+    background-color: #1e293b;
+}
+
+body.modo-oscuro .destino-card h3 {
+    color: #f8fafc;
+}
+
+body.modo-oscuro .destino-card p {
+    color: #94a3b8;
+}
+
+body.modo-oscuro .destino-card::before,
+body.modo-oscuro .destino-card::after {
+    background: linear-gradient(90deg, #6366f1, #ff6f61);
+}
+
+
+
+
+
+
+
+
 
 
 

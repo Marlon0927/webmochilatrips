@@ -3,6 +3,7 @@ import { DestinosService, Destino } from '../../services/destinos.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
+  standalone: true,
   imports: [CommonModule],
   selector: 'app-destinos',
   templateUrl: './destinos.component.html',
@@ -10,9 +11,13 @@ import { CommonModule } from '@angular/common';
 })
 export class DestinosComponent implements OnInit {
   destinos: Destino[] = [];
+<<<<<<< HEAD
   showDropdown = false;
   /*temaActual: 'claro' | 'oscuro' = 'claro';*/
 
+=======
+  
+>>>>>>> a959089837bbd3a49955f469a20067681f4bd1df
   constructor(private destinosService: DestinosService) { }
 
   ngOnInit(): void {
@@ -21,6 +26,7 @@ export class DestinosComponent implements OnInit {
       this.destinos = data;
     });
 
+<<<<<<< HEAD
     /* Detectar tema guardado
        const temaGuardado = localStorage.getItem('tema');
      this.temaActual = (temaGuardado as 'claro' | 'oscuro') || 'claro';
@@ -41,5 +47,7 @@ export class DestinosComponent implements OnInit {
        body.classList.remove('modo-oscuro');
      }*/
 
+=======
+>>>>>>> a959089837bbd3a49955f469a20067681f4bd1df
   }
 }
