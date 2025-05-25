@@ -1,3 +1,68 @@
+.frase-viaje {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  padding: 12px 24px 12px 56px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 119, 182, 0.3);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.boton-inicio-fijo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  background-image: url('/avion-boton.png');
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 3px solid #4e243b;
+}
+
+.boton-inicio-fijo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+  border-color: #050b0c;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Estilos generales para el body */
 /* Para el menú */
 .dropdown {
@@ -73,7 +138,7 @@
 
 /* Hover sobre cada opción */
 .dropdown-content a:hover {
-    background-color: rgba(200, 50, 20, 0.95);
+    background-color: rgba(243, 221, 217, 0.95);
     /* un poco más oscuro */
 }
 
@@ -520,7 +585,7 @@ nav ul li a {
 
 
 .logo {
-    width: 150px;
+    width: 180px;
     /* Cambia este valor para hacer el logo más grande o más pequeño */
     height: auto;
     /* Mantiene la proporción correcta */

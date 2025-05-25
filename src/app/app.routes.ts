@@ -9,6 +9,7 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 
 
 export const routes: Routes = [
+    {path: '', redirectTo: 'inicio', pathMatch: 'full' },
     {path: 'inicio', component: InicioComponent},
     {path: 'destinos', component: DestinosComponent},
     {path: 'planes', component: PlanesComponent},

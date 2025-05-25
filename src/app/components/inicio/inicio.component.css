@@ -7,41 +7,67 @@
 }
 
 .dropbtn {
-    background-color: #0077b6;
-    color: white;
-    padding: 5px 15px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    height: 35px;
-    line-height: 20px;
-    font-weight: bold;
+  background: linear-gradient(135deg, #004aad, #48cae4); /* azul turquesa degradado */
+  color: white;
+  padding: 8px 18px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px; /* botón más redondeado, estilo “pill” */
+  height: 40px;
+  line-height: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espacio entre icono y texto */
+  box-shadow: 0 4px 10px rgba(0, 180, 216, 0.4);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-/*Boton inicio sesion*/
+.dropbtn:hover {
+  background: linear-gradient(135deg, #0077b6, #00a7d3);
+  transform: scale(1.05);
+}
+
+
+
+
+
 .login {
     position: fixed;
     top: 20px;
     right: 20px;
-    padding: 10px 20px;
-    background-color: #0077b6;
-    /* Azul moderno */
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #0077b6, #48cae4);
     color: white;
     border: none;
-    border-radius: 8px;
-    font-weight: bold;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: background 0.3s ease, transform 0.2s ease;
     z-index: 1000;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* espacio entre ícono y texto */
 }
 
-/*Boton inicio sesion*/
 .login:hover {
-    background-color: #0077b6;
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #0096c7, #00b4d8);
+    transform: scale(1.07);
 }
+
+
+
+
+
+
+
+
 
 /* Contenedor del contenido desplegable */
 .dropdown-content {
@@ -49,7 +75,7 @@
     top: 100%;
     /* justo debajo del botón */
     left: 0;
-    background-color: rgba(255, 87, 51, 0.9);
+    background-color: rgba(236, 255, 255, 0.9);
     /* #ff5733 traslúcido */
     min-width: 160px;
     border-radius: 4px;
@@ -63,16 +89,17 @@
 
 /* Estilo para los enlaces del menú */
 .dropdown-content a {
-    color: white;
+    color: rgb(23, 14, 65);
     font-weight: bold;
     padding: 10px 15px;
     text-decoration: none;
     display: block;
 }
 
+
 /* Hover sobre cada opción */
 .dropdown-content a:hover {
-    background-color: rgba(200, 50, 20, 0.95);
+    background-color: rgba(255, 145, 123, 0.95);
     /* un poco más oscuro */
 }
 
@@ -120,28 +147,37 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin-top: 20px; /* Puedes ajustar el valor a lo que necesites */
 }
 
 nav ul li {
-    background-color: #0077b6;
-    /* Azul */
-    padding: 8px 15px;
-    /* Espaciado interno */
-    border-radius: 5px;
-    /* Bordes redondeados */
+  background: linear-gradient(135deg, #0077b6, #48cae4); /* degradado turquesa */
+  padding: 10px 20px;
+  border-radius: 25px; /* más redondeado, estilo “pill” */
+  margin: 0 8px; /* separación horizontal entre botones */
+  transition: background 0.3s ease, transform 0.2s ease;
+  list-style: none; /* quitar bullets si es que no lo tienes */
+  box-shadow: 0 4px 8px rgba(0, 180, 216, 0.4);
 }
 
-/* Enlace dentro del li */
-nav ul li a {
-    color: #0077b6;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
+nav ul li:hover {
+  background: linear-gradient(135deg, #0077b6, #00a7d3);
+  transform: scale(1.05);
 }
+
+nav ul li a {
+  color: white; /* para contraste con el fondo */
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  display: block;
+  text-align: center;
+}
+
 
 
 .logo {
-    width: 150px;
+    width: 180px;
     /* Cambia este valor para hacer el logo más grande o más pequeño */
     height: auto;
     /* Mantiene la proporción correcta */

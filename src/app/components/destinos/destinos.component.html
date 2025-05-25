@@ -1,31 +1,25 @@
 <!-- Navbar -->
 <header>
-    <nav> <!-- Barra de Navegacion -->
-        <div class="logo-container">
-            <img src="/assets/logomochila.jpg" alt="Logo de MochilaTrips" class="logo">
+  <nav> <!-- Barra de Navegacion -->
+    <div class="frase-viaje">
+      <span>Explora <strong>nuevos destinos</strong></span>
+    </div>
+    <ul>
+
+      <div class="dropdown" (mouseenter)="showDropdown = true" (mouseleave)="showDropdown = false">
+
+        <div class="dropdown-content" [class.show]="showDropdown">
+          <a href="/destinos">Destinos</a>
+          <a href="/planes">Planes</a>
+          <a href="/reservas">Reservas</a>
         </div>
-        <ul>
+      </div>
 
-            <div class="dropdown" (mouseenter)="showDropdown = true" (mouseleave)="showDropdown = false">
-                <button class="dropbtn">Menú ▼</button>
-                <div class="dropdown-content" [class.show]="showDropdown">
-                    <a href="/destinos">Destinos</a>
-                    <a href="/planes">Planes</a>
-                    <a href="/reservas">Reservas</a>
-                </div>
-            </div>
-            <li><a routerLink="/">Inicio</a></li>
-            <li><a href="/destinos">Destinos</a></li>
-            <li><a href="/planes">Planes</a></li>
-            <li><a href="/reservas">Reservas</a></li>
-            <li><a href="/comentarios">Comentarios</a></li>
-            <li><a href="/chatbot">Chatbot</a></li>
-            <li><a href="/user">Registro</a></li>
-            <li><a href="">Perfil</a></li>
-
-        </ul>
-    </nav> <!-- cierra Barra de Navegacion -->
+    </ul>
+  </nav> <!-- cierra Barra de Navegacion -->
 </header>
+
+<a href="/inicio" class="boton-inicio-fijo" title="Volver al Inicio"></a>
 
 <div class="destinos-container">
   <div *ngFor="let destino of destinos" class="destino-card">

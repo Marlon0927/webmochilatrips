@@ -18,7 +18,6 @@ export class DestinosComponent implements OnInit {
 
   ngOnInit(): void {
     this.destinosService.getDestinos().subscribe((data: Destino[]) => {
-      console.log('Datos recibidos:', data);
       this.destinos = data;
     });
 
