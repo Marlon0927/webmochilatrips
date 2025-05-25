@@ -1,3 +1,33 @@
+.frase-viaje {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, #00b4d8, #0077b6);
+  padding: 12px 24px 12px 56px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 119, 182, 0.3);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .boton-inicio-fijo {
   position: fixed;
   top: 20px;
@@ -22,6 +52,8 @@
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
   border-color: #050b0c;
 }
+
+
 
 
 
@@ -553,7 +585,7 @@ nav ul li a {
 
 
 .logo {
-    width: 150px;
+    width: 180px;
     /* Cambia este valor para hacer el logo más grande o más pequeño */
     height: auto;
     /* Mantiene la proporción correcta */
