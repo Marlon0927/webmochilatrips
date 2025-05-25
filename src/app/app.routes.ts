@@ -6,6 +6,7 @@ import { ReservaComponent } from './components/reservas/reservas.component';
 import { UserComponent } from './components/user/user.component';
 import { LoginComponent } from './components/login/login.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { ComentariosComponent } from './components/comentarios/comentarios.component';
 
 
 export const routes: Routes = [
@@ -16,6 +17,7 @@ export const routes: Routes = [
     {path: 'reservas', component: ReservaComponent},
     {path: 'user', component: UserComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'perfil', component: PerfilComponent}
+    {path: 'perfil', component: PerfilComponent},
+    {path: 'comentarios', component:ComentariosComponent }
 ];
 
