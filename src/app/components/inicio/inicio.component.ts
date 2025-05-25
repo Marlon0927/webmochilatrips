@@ -1,35 +1,35 @@
-import { Component, HostListener } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
-import { LoginService } from '../../services/login.service';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
+import { CommonModule } from '@angular/common';
+import { LoginService } from '../../services/login.service';
 
 @Component({
   selector: 'app-inicio',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './inicio.component.html',
   styleUrl: './inicio.component.css',
-  template: `
-    <h1>Bienvenido, {{ usuario?.nombre || 'Usuario' }}</h1>
-    <button (click)="logout()">Cerrar sesión</button>`
 })
-export class InicioComponent {
 
+export class InicioComponent implements OnInit {
+  usuario: any = null;
+  estaLogueado = false;
   showDropdown = false;
-  isOpen = false;
-  // agrega usuario actual
-  usuarioActual: any;
-  /////////////////////
-  toggleDropdown() {
-    this.isOpen = !this.isOpen;
-  }
 
-  @HostListener('document:click', ['$event'])
-  closeDropdown(event: Event) {
-    const target = event.target as HTMLElement;
-    if (!target.closest('.dropdown')) {
-      this.isOpen = false;
+  constructor(private loginService: LoginService, private router: Router) { }
+
+  ngOnInit() {
+    this.usuario = this.loginService.obtenerUsuario();
+    this.estaLogueado = this.loginService.estaLogueado();
+
+    if (!this.estaLogueado) {
+      this.router.navigate(['/inicio']);
     }
   }
 
-
+  logout() {
+    this.loginService.logout();
+    this.router.navigate(['/inicio']);
+  }
 }
