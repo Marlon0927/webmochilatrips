@@ -14,18 +14,27 @@
   </nav>
 </header>
 
+
+<button (click)="alternarTema()"
+  class="fixed top-4 right-4 z-50 p-2 bg-gray-200 rounded-full shadow-md dark:bg-gray-700"
+  aria-label="Alternar modo claro/oscuro" title="Alternar modo claro/oscuro">
+  <span *ngIf="temaActual === 'claro'">🌙</span>
+  <span *ngIf="temaActual === 'oscuro'">🌞</span>
+</button>
+
 <div class="destinos-container">
   <div *ngFor="let destino of destinos" class="destino-card">
     <div class="imagenes">
       <img *ngIf="destino.imagen1" class="img-grande" [src]="destino.imagen1" alt="Imagen 1">
     </div>
-    <h2>{{ destino.pais }} - {{ destino.ciudad }}</h2>
-    <p><strong>Precio:</strong> {{ destino.precio }}</p>
-    <p><strong>Duración:</strong> {{ destino.duracion || 'No especificada' }}</p>
-    <p><strong>Desde:</strong> {{ destino.fecha_inicio }}</p>
-    <p><strong>Hasta:</strong> {{ destino.fecha_final }}</p>
-    <p><strong>Descripción:</strong> {{ destino.descripcion }}</p>
-
+    <div class="destino-info">
+      <h2>{{ destino.pais }} - {{ destino.ciudad }}</h2>
+      <p><strong>Precio:</strong> {{ destino.precio }}</p>
+      <p><strong>Duración:</strong> {{ destino.duracion || 'No especificada' }}</p>
+      <p><strong>Desde:</strong> {{ destino.fecha_inicio }}</p>
+      <p><strong>Hasta:</strong> {{ destino.fecha_final }}</p>
+      <p><strong>Descripción:</strong> {{ destino.descripcion }}</p>
+    </div>
     <div class="imagenes">
       <img *ngIf="destino.imagen2" [src]="destino.imagen2" alt="Imagen 2">
       <img *ngIf="destino.imagen3" [src]="destino.imagen3" alt="Imagen 3">
