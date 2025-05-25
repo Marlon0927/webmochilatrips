@@ -7,14 +7,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://localhost:3001/api/user';
+  private apiUrl = 'http://localhost:3001/api/users';
   httpOptions = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }
-  getAllUsersData(): Observable<any> {
-    return this.http.get<any>(this.apiUrl)
-  }
-
 
   newUser(data: any): Observable<any> {
     return this.http.post<any>(
