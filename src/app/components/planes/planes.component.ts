@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './planes.component.css'
 })
 export class PlanesComponent {
-
+showDropdown = false;
 }

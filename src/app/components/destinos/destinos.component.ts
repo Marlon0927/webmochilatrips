@@ -10,7 +10,8 @@ import { CommonModule } from '@angular/common';
 })
 export class DestinosComponent implements OnInit {
   destinos: Destino[] = [];
-  temaActual: 'claro' | 'oscuro' = 'claro';
+  showDropdown = false;
+  /*temaActual: 'claro' | 'oscuro' = 'claro';*/
 
   constructor(private destinosService: DestinosService) { }
 
@@ -20,25 +21,25 @@ export class DestinosComponent implements OnInit {
       this.destinos = data;
     });
 
- // Detectar tema guardado
-    const temaGuardado = localStorage.getItem('tema');
-  this.temaActual = (temaGuardado as 'claro' | 'oscuro') || 'claro';
-  this.aplicarTema();
-}
-
- alternarTema(): void {
-  this.temaActual = this.temaActual === 'claro' ? 'oscuro' : 'claro';
-  localStorage.setItem('tema', this.temaActual);
-  this.aplicarTema();
-}
-
- aplicarTema(): void {
-  const body = document.body;
-  if (this.temaActual === 'oscuro') {
-    body.classList.add('modo-oscuro');
-  } else {
-    body.classList.remove('modo-oscuro');
-  }
+    /* Detectar tema guardado
+       const temaGuardado = localStorage.getItem('tema');
+     this.temaActual = (temaGuardado as 'claro' | 'oscuro') || 'claro';
+     this.aplicarTema();
+   }
+   
+    alternarTema(): void {
+     this.temaActual = this.temaActual === 'claro' ? 'oscuro' : 'claro';
+     localStorage.setItem('tema', this.temaActual);
+     this.aplicarTema();
+   }
+   
+    aplicarTema(): void {
+     const body = document.body;
+     if (this.temaActual === 'oscuro') {
+       body.classList.add('modo-oscuro');
+     } else {
+       body.classList.remove('modo-oscuro');
+     }*/
 
   }
 }
