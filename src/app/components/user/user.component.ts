@@ -27,11 +27,6 @@ export class UserComponent {
     private router: Router,
   ) { }
 
-  getAllUsers() {
-    this.userService.getAllUsersData().subscribe((data: {}) => {
-      this.userList = data;
-    });
-  }
   ngOnInit() {
     this.userForm = this.formBuilder.group({
       'usuario': '',
@@ -44,7 +39,7 @@ export class UserComponent {
       'preferencias_de_viaje': '',
       'rol': ''
     });
-    this.getAllUsers();
+
   }
 
   /*newMessage(messageText: string) {

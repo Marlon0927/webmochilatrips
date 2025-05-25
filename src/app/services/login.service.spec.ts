@@ -1,16 +1,25 @@
-import { TestBed } from '@angular/core/testing';
+// login.service.ts
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-import { LoginService } from './login.service';
+@Injectable({ providedIn: 'root' })
+export class LoginService {
+  private apiUrl = 'http://localhost:3001/api/login';
 
-describe('LoginService', () => {
-  let service: LoginService;
+  constructor(private http: HttpClient) { }
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(LoginService);
-  });
+  // Iniciar sesión, envía correo y clave, recibe cookie de sesión
+  login(correo: string, clave: string) {
+    return this.http.post<any>(this.apiUrl, { correo, clave }, { withCredentials: true });
+  }
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+  // Obtener usuario actual basado en sesión backend
+  getUsuarioActual() {
+    return this.http.get<any>(`${this.apiUrl}/usuario-actual`, { withCredentials: true });
+  }
+
+  // Cerrar sesión en backend
+  logout() {
+    return this.http.post(`${this.apiUrl}/logout`, {}, { withCredentials: true });
+  }
+}
