@@ -1,0 +1,78 @@
+/* Reset y estilos base */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-card {
+    background: #fff;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 25px;
+    text-align: center;
+}
+
+.profile-card h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.profile-card p {
+    margin: 6px 0;
+    color: #555;
+    font-size: 16px;
+}
+
+.profile-label {
+    font-weight: 600;
+    color: #222;
+}
+
+.profile-value {
+    color: #444;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    background: #ddd;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #666;
+    user-select: none;
+}
+
+/* Botón para editar o regresar (opcional) */
+.btn-primary {
+    margin-top: 25px;
+    background-color: #0d6efd;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+}
