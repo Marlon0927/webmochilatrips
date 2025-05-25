@@ -20,7 +20,7 @@ export interface Destino {
   providedIn: 'root'
 })
 export class DestinosService {
-  private apiUrl = 'http://localhost:3001/api/destinos'; // Ajusta esto a tu API real
+  private apiUrl = 'http://localhost:3001/api/reservas'; // Ajusta esto a tu API real
 
   constructor(private http: HttpClient) { }
 
