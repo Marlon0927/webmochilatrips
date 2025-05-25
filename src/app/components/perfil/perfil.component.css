@@ -102,3 +102,25 @@ body {
 .btn-primary:hover {
     background-color: #0b5ed7;
 }
+/* Estilo para los enlaces del menú */
+.dropdown-content a {
+    color: rgb(23, 14, 65);
+    font-weight: bold;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Hover sobre cada opción */
+.dropdown-content a:hover {
+    background-color: rgba(255, 145, 123, 0.95);
+    /* un poco más oscuro */
+}
+
+/* Mostrar el menú al hacer hover en el contenedor */
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
