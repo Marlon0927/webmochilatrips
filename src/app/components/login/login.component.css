@@ -1,76 +1,183 @@
-.boton-inicio-fijo {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  width: 100px;
-  height: 100px;
-  background-image: url('/avion-boton.png');
-  background-size: 200%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: white;
-  border-radius: 50%;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-  z-index: 1000;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  border: 3px solid #4e243b;
+/* Superposición para mejorar la legibilidad del formulario */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    /* capa translúcida */
+    backdrop-filter: blur(4px);
+    z-index: -1;
 }
 
-.boton-inicio-fijo:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
-  border-color: #050b0c;
+/* Contenedor del formulario */
+form.card {
+    max-width: 600px;
+    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    padding: 32px;
+    position: relative;
+    border: 2px solid #ade8f4;
+}
+
+/* Título opcional para el formulario */
+form.card h2 {
+    text-align: center;
+    color: #0077b6;
+    margin-bottom: 24px;
+    font-size: 28px;
+}
+
+/* Etiquetas */
+.form-label {
+    font-weight: 600;
+    color: #023e8a;
+}
+
+/* Inputs */
+input.form-control {
+    border-radius: 10px;
+    border: 1px solid #90e0ef;
+    padding: 12px;
+    margin-bottom: 16px;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    background-color: #f0f8ff;
+}
+
+input.form-control:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 8px rgba(0, 119, 182, 0.2);
+    outline: none;
+}
+
+/* Placeholder */
+::placeholder {
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Botón guardar */
+button.btn-primary {
+    background-color: #0077b6;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    color: white;
+    cursor: pointer;
+}
+
+button.btn-primary:hover {
+    background-color: #023e8a;
+    transform: scale(1.05);
+}
+
+/* Grupo de botón */
+.input-group {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
 }
 
 
-.login-container {
-    max-width: 400px;
-    margin: 80px auto;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+.form-title {
+    text-align: center;
+    font-size: 28px;
+    color: #0077b6;
+    margin-top: 48px;
+    /* Espacio hacia arriba */
+    margin-bottom: 48px;
+    /* Aumentado el espacio hacia abajo */
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 119, 182, 0.2);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.login-container h2 {
+
+
+
+
+
+
+
+.boton-inicio-fijo {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background-image: url('/avion-boton.png');
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 3px solid #4e243b;
+}
+
+.boton-inicio-fijo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+    border-color: #050b0c;
+}
+
+
+
+.container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
     text-align: center;
     margin-bottom: 25px;
-    color: #333;
 }
 
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
+form label {
     display: block;
     font-weight: 600;
-    margin-bottom: 8px;
-    color: #444;
+    margin-bottom: 6px;
+    margin-top: 12px;
 }
 
-.form-group input {
+form input {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
+    padding: 8px 10px;
+    border: 1.5px solid #ccc;
     border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.btn-submit {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #2e86de;
+    color: white;
+    font-weight: 700;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
     font-size: 16px;
 }
 
-button.login {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.25s ease;
-}
-
-button.login:hover {
-    background-color: #0056b3;
+.btn-submit:hover {
+    background-color: #1b4f72;
 }

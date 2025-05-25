@@ -1,6 +1,17 @@
-<form (ngSubmit)="onSubmit()" #loginForm="ngForm">
-    <input type="email" [(ngModel)]="correo" name="correo" placeholder="Correo" required />
-    <input type="password" [(ngModel)]="clave" name="clave" placeholder="Clave" required />
-    <button type="submit">Ingresar</button>
+<h2 class="form-title">Iniciar Sesión</h2>
+
+<form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="card">
+    <label class="form-label" for="correo">Correo</label>
+    <input id="correo" type="email" [(ngModel)]="correo" name="correo" placeholder="Correo electrónico"
+        class="form-control" required />
+
+    <label class="form-label" for="clave">Clave</label>
+    <input id="clave" type="password" [(ngModel)]="clave" name="clave" placeholder="Contraseña" class="form-control"
+        required />
+
+    <div class="input-group">
+        <button type="submit" class="btn-primary">Ingresar</button>
+    </div>
 </form>
-<p *ngIf="error" style="color:red">{{ error }}</p>
+
+<p *ngIf="error" style="color:red; text-align:center; margin-top: 20px;">{{ error }}</p>
