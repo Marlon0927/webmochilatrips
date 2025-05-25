@@ -7,23 +7,23 @@
 }
 
 .dropbtn {
-  background: linear-gradient(135deg, #004aad, #48cae4); /* azul turquesa degradado */
+  background: linear-gradient(135deg, #004aad, #48cae4);
   color: white;
-  padding: 8px 18px;
+  padding: 10px 20px; /* igual al li */
   font-size: 16px;
   border: none;
   cursor: pointer;
-  border-radius: 25px; /* botón más redondeado, estilo “pill” */
-  height: 40px;
-  line-height: 20px;
+  border-radius: 25px;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
   display: flex;
   align-items: center;
-  gap: 8px; /* espacio entre icono y texto */
+  gap: 8px;
   box-shadow: 0 4px 10px rgba(0, 180, 216, 0.4);
   transition: background 0.3s ease, transform 0.2s ease;
+  /* height y line-height eliminados para que el tamaño lo determine el padding */
 }
+
 
 .dropbtn:hover {
   background: linear-gradient(135deg, #0077b6, #00a7d3);
@@ -177,7 +177,7 @@ nav ul li a {
 
 
 .logo {
-    width: 150px;
+    width: 180px;
     /* Cambia este valor para hacer el logo más grande o más pequeño */
     height: auto;
     /* Mantiene la proporción correcta */

@@ -1,3 +1,137 @@
+/* Superposición para mejorar la legibilidad del formulario */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4); /* capa translúcida */
+  backdrop-filter: blur(4px);
+  z-index: -1;
+}
+
+/* Contenedor del formulario */
+form.card {
+  max-width: 600px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  padding: 32px;
+  position: relative;
+  border: 2px solid #ade8f4;
+}
+
+/* Título opcional para el formulario */
+form.card h2 {
+  text-align: center;
+  color: #0077b6;
+  margin-bottom: 24px;
+  font-size: 28px;
+}
+
+/* Etiquetas */
+.form-label {
+  font-weight: 600;
+  color: #023e8a;
+}
+
+/* Inputs */
+input.form-control {
+  border-radius: 10px;
+  border: 1px solid #90e0ef;
+  padding: 12px;
+  margin-bottom: 16px;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  background-color: #f0f8ff;
+}
+
+input.form-control:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 8px rgba(0, 119, 182, 0.2);
+  outline: none;
+}
+
+/* Placeholder */
+::placeholder {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Botón guardar */
+button.btn-primary {
+  background-color: #0077b6;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+}
+
+button.btn-primary:hover {
+  background-color: #023e8a;
+  transform: scale(1.05);
+}
+
+/* Grupo de botón */
+.input-group {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.form-title {
+  text-align: center;
+  font-size: 28px;
+  color: #0077b6;
+  margin-top: 48px;     /* Espacio hacia arriba */
+  margin-bottom: 48px; /* Aumentado el espacio hacia abajo */
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 119, 182, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+
+
+
+.boton-inicio-fijo {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  background-image: url('/avion-boton.png');
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 3px solid #4e243b;
+}
+
+.boton-inicio-fijo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+  border-color: #050b0c;
+}
+
+
+
 .container {
     max-width: 500px;
     margin: 80px auto;

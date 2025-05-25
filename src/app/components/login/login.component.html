@@ -1,6 +1,29 @@
+<<<<<<< HEAD
 <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
     <input type="email" [(ngModel)]="correo" name="correo" placeholder="Correo" required />
     <input type="password" [(ngModel)]="clave" name="clave" placeholder="Clave" required />
     <button type="submit">Ingresar</button>
 </form>
 <p *ngIf="error" style="color: red;">{{ error }}</p>
+=======
+<a href="/inicio" class="boton-inicio-fijo" title="Volver al Inicio"></a>
+
+<div class="login-container">
+
+    
+    <h2>Iniciar Sesión</h2>
+    <form>
+        <div class="form-group">
+            <label for="usuario">Usuario</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario" />
+        </div>
+
+        <div class="form-group">
+            <label for="clave">Contraseña</label>
+            <input type="password" id="clave" name="clave" placeholder="Ingresa tu contraseña" />
+        </div>
+
+        <button type="submit" class="login">Entrar</button>
+    </form>
+</div>
+>>>>>>> f8a4311fea9f338681f3b219d4e4b1c237d54ec6
