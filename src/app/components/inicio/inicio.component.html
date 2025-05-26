@@ -1,6 +1,12 @@
 <!-- inicio.component.html -->
 
-<a class="login" href="/login">Iniciar Sesión ✈️</a>
+<!--<a class="login" href="/login">Iniciar Sesión ✈️</a>-->
+
+<a class="login" *ngIf="!estaLogueado" href="/login">Iniciar sesión ✈️</a>
+
+
+<!-- Opcionalmente, muestra un saludo si está logueado -->
+<span *ngIf="estaLogueado">Hola, {{ usuario?.nombre }}</span>
 
 <header>
     <nav> <!-- Barra de Navegacion -->

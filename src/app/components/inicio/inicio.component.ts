@@ -23,6 +23,7 @@ export class InicioComponent implements OnInit {
     this.usuario = this.loginService.obtenerUsuario();
     this.estaLogueado = this.loginService.estaLogueado();
 
+
     if (!this.estaLogueado) {
       this.router.navigate(['/inicio']);
     }
