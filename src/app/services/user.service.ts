@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'http://localhost:3001/api/users';
+  private apiUrl = 'http://localhost:3001/api/user';
   httpOptions = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient) { }

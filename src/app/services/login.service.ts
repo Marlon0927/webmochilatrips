@@ -5,17 +5,17 @@ import { Observable, tap } from 'rxjs';
 interface Usuario {
   correo: string;
   nombre: string;
-  // otros campos si tienes
+
 }
 
 @Injectable({
   providedIn: 'root',
 })
 export class LoginService {
-  private apiUrl = 'http://localhost:3001/api'; // Cambia por tu URL real
+  private apiUrl = 'http://localhost:3001/api';
   private loggedUser: Usuario | null = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   login(correo: string, clave: string): Observable<Usuario> {
     return this.http.post<Usuario>(`${this.apiUrl}/login`, { correo, clave }).pipe(

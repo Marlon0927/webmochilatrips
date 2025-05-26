@@ -42,70 +42,18 @@ export class UserComponent {
 
   }
 
-  /*newMessage(messageText: string) {
-    this.toastr.success('Clic aquí para actualizar la lista', messageText)
-      .onTap
-      .pipe(take(1))
-      .subscribe(() => window.location.reload());
-  }*/
-
   newUserEntry() {
     this.userService.newUser(this.userForm.value).subscribe(
       () => {
-        //Redirigiendo a la ruta actual /inicio y recargando la ventana
-        this.router.navigate(['/inicio'])
-          .then(() => {
-            this.toastr.success('Usuario creado correctamente!');
-          })
-      }
-    );
-  }
-
-  newMessage(messageText: string) {
-    this.toastr.success('Clic aquí para actualizar la lista', messageText)
-      .onTap
-      .pipe(take(1))
-      .subscribe(() => window.location.reload());
-  }
-
-  /*toggleEditAnimal(id: any) {
-    this.idAnimal = id;
-    console.log(this.idAnimal)
-    this.userService.getOneAnimal(id).subscribe(
-      data => {
-        this.animalForm.setValue({
-          nombre: data.nombre,
-          edad: data.edad,
-          tipo: data.tipo,
+        this.router.navigate(['/inicio']).then(() => {
+          this.toastr.success('Usuario creado correctamente!');
         });
+      },
+      (error) => {
+        console.error('Error al crear usuario:', error);
+        this.toastr.error('No se pudo crear el usuario.');
       }
     );
-    this.editableAnimal = !this.editableAnimal;
   }
-  updateAnimalEntry() {
-    //Removiendo valores vacios del formulario de actualización
-    for (let key in this.animalForm.value) {
-      if (this.animalForm.value[key] === '') {
-        this.animalForm.removeControl(key);
-      }
-    }
-    this.animalService.updateAnimal(this.idAnimal, this.animalForm.value).subscribe(
-      () => {
-        //Enviando mensaje de confirmación
-        this.newMessage("Animal editado");
-      }
-    );
-  }*/
-
-  /*deleteAnimalEntry(id: any) {
-    console.log(id)
-    this.animalService.deleteAnimal(id).subscribe(
-      () => {
-        //Enviando mensaje de confirmación
-        this.newMessage("Animal eliminado");
-      }
-    );
-  }*/
-
 
 }
